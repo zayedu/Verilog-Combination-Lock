@@ -1,0 +1,20 @@
+
+State Machine - |combolock|y
+Name y.ALARM y.WRONG y.NEW y.START y.OPEN 
+y.START 0 0 0 0 0 
+y.NEW 0 0 1 1 0 
+y.WRONG 0 1 0 1 0 
+y.ALARM 1 0 0 1 0 
+y.OPEN 0 0 0 1 1 
+
+State Machine - |combolock|inputcond:incon2|y
+Name y.A y.C y.B 
+y.A 0 0 0 
+y.B 1 0 1 
+y.C 1 1 0 
+
+State Machine - |combolock|inputcond:incon1|y
+Name y.A y.C y.B 
+y.A 0 0 0 
+y.B 1 0 1 
+y.C 1 1 0 

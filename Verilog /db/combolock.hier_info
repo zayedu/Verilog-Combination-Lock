@@ -1,0 +1,45 @@
+|combolock
+Clock => Clock.IN2
+Resetn => temp[0].ACLR
+Resetn => temp[1].PRESET
+Resetn => temp[2].PRESET
+Resetn => temp[3].ACLR
+Resetn => y~3.DATAIN
+switch[0] => Equal0.IN3
+switch[0] => Selector7.IN2
+switch[1] => Equal0.IN2
+switch[1] => Selector9.IN2
+switch[2] => Equal0.IN1
+switch[2] => Selector10.IN2
+switch[3] => Equal0.IN0
+switch[3] => Selector11.IN2
+enter => enter.IN1
+change => change.IN1
+leds[6] <= leds[6].DB_MAX_OUTPUT_PORT_TYPE
+leds[5] <= leds.DB_MAX_OUTPUT_PORT_TYPE
+leds[4] <= WideNor0.DB_MAX_OUTPUT_PORT_TYPE
+leds[3] <= leds[6].DB_MAX_OUTPUT_PORT_TYPE
+leds[2] <= WideNor0.DB_MAX_OUTPUT_PORT_TYPE
+leds[1] <= leds.DB_MAX_OUTPUT_PORT_TYPE
+leds[0] <= leds.DB_MAX_OUTPUT_PORT_TYPE
+e_pulse <= inputcond:incon1.port2
+c_pulse <= inputcond:incon2.port2
+correct <= Equal0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|combolock|inputcond:incon1
+Clock => y~1.DATAIN
+w => y.A.DATAIN
+w => Y.B.DATAB
+w => Selector0.IN1
+z <= z.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|combolock|inputcond:incon2
+Clock => y~1.DATAIN
+w => y.A.DATAIN
+w => Y.B.DATAB
+w => Selector0.IN1
+z <= z.DB_MAX_OUTPUT_PORT_TYPE
+
+
